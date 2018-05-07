@@ -20,6 +20,7 @@ class QuotesController < ApplicationController
     if @quote.update!(quote_params)
       render status: 200, json: {
         message: "Your quote has been updated successfully.",
+        quote: @quote
    }
     end
   end
